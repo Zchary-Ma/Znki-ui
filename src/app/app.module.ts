@@ -17,6 +17,8 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { StatusComponent } from './shared/components/status/status.component';
 import { SidebarComponent } from './pages/sidebar/sidebar.component';
+import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
+import { SharedModule } from './shared/shared.module';
 
 const NbModules = [
   NbSidebarModule.forRoot(), // NbSidebarModule.forRoot(), //if this is your app.module
@@ -34,13 +36,13 @@ const NbModules = [
     AuthComponent,
     FooterComponent,
     HeaderComponent,
-    StatusComponent,
     SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SharedModule,
     ...NbModules,
   ],
   providers: [],
