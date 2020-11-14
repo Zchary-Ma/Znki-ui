@@ -38,9 +38,12 @@ speed-measure-plugin*.json
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
-testem.log
+testem.lo
 /typings
 
 # System Files
 .DS_Store
 Thumbs.db
+
+/.storybook
+/src/stories

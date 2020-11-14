@@ -1,6 +1,23 @@
-<header>
-  Znki
-</header>
+<nb-layout>
+
+  <nb-layout-header fixed>
+    <nb-icon icon="menu" (click)="toggle()"></nb-icon>
+  </nb-layout-header>
+
+  <nb-sidebar>a</nb-sidebar>
+  <nb-layout-column>
+
+    <header>
+      Znki
+    </header>
 
 
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+    <app-footer></app-footer>
+  </nb-layout-footer>
+
+</nb-layout>
