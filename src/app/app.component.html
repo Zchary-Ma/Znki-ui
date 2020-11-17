@@ -2,15 +2,13 @@
 
   <nb-layout-header fixed>
     <nb-icon icon="menu" (click)="toggle()"></nb-icon>
+    <div class="title">Znki</div>
   </nb-layout-header>
 
-  <nb-sidebar>a</nb-sidebar>
+  <nb-sidebar>
+    <app-sidebar></app-sidebar>
+  </nb-sidebar>
   <nb-layout-column>
-
-    <header>
-      Znki
-    </header>
-
 
     <router-outlet></router-outlet>
 

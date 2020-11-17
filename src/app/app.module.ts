@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,13 +12,13 @@ import {
   NbButtonModule,
   NbSidebarModule,
   NbIconModule,
+  NbListModule,
+  NbCardModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { FooterComponent } from './pages/footer/footer.component';
-import { HeaderComponent } from './pages/header/header.component';
-import { StatusComponent } from './shared/components/status/status.component';
-import { SidebarComponent } from './pages/sidebar/sidebar.component';
-import { SearchBarComponent } from './shared/components/search-bar/search-bar.component';
+import { FooterComponent } from './shared/pages/footer/footer.component';
+import { HeaderComponent } from './shared/pages/header/header.component';
+import { SidebarComponent } from './shared/pages/sidebar/sidebar.component';
 import { SharedModule } from './shared/shared.module';
 
 const NbModules = [
@@ -28,6 +29,8 @@ const NbModules = [
   NbIconModule,
   NbEvaIconsModule,
   NbSidebarModule,
+  NbListModule,
+  NbCardModule,
 ];
 
 @NgModule({
@@ -41,6 +44,7 @@ const NbModules = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     BrowserAnimationsModule,
     SharedModule,
     ...NbModules,
