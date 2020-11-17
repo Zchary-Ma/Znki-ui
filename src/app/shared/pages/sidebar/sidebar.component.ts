@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   templateUrl: './sidebar.component.html',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-sidebar',
 })
 export class SidebarComponent implements OnInit {
-  menuItems: { label: string; icon: string; url: string }[] = [
-    { label: 'Overview', icon: '', url: '/overview' },
-    { label: 'Znki', icon: '', url: '/list' },
-    { label: 'About', icon: '', url: '/about' },
+  menuItems: NbMenuItem[] = [
+    { title: 'Overview', icon: 'home', link: '/overview' },
+    { title: 'Znki', icon: 'book-open', link: '/list' },
+    { title: 'About', icon: 'person', link: '/about' },
   ];
 
   constructor() {}

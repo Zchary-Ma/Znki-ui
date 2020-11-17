@@ -14,6 +14,7 @@ import {
   NbIconModule,
   NbListModule,
   NbCardModule,
+  NbMenuModule,
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { FooterComponent } from './shared/pages/footer/footer.component';
@@ -31,6 +32,7 @@ const NbModules = [
   NbSidebarModule,
   NbListModule,
   NbCardModule,
+  NbMenuModule.forRoot(),
 ];
 
 @NgModule({

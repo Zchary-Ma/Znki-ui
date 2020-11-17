@@ -1,5 +1,1 @@
-  <nb-list>
-    <nb-list-item *ngFor="let menuItem of menuItems" routerLinkActive="is-active">
-      <a [routerLink]="menuItem.url" >{{menuItem.label}}</a>
-    </nb-list-item>
-  </nb-list>
+ <nb-menu [items]="menuItems"></nb-menu>
