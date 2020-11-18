@@ -1,4 +1,5 @@
-import { NzIconModule } from 'ng-zorro-antd/icon';
+import { icons } from './shared/const/icon.const';
+import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -21,7 +22,7 @@ import en from '@angular/common/locales/en';
 registerLocaleData(en);
 
 const NzModules = [
-  NzIconModule,
+  NzIconModule.forRoot(icons),
   IconsProviderModule,
   NzLayoutModule,
   NzMenuModule,
