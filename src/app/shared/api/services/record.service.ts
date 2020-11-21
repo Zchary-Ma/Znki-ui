@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
 import { CreateRecordDto } from '../models/create-record-dto';
-import { GetManyRecordResponseDto } from '../models/get-many-record-response-dto';
 import { Record } from '../models/record';
+import { RecordsResponseDto } from '../models/records-response-dto';
 
 @Injectable({
   providedIn: 'root',
@@ -295,7 +295,7 @@ export class RecordService extends BaseService {
      */
     cache?: number;
 
-  }): Observable<StrictHttpResponse<GetManyRecordResponseDto | Array<Record>>> {
+  }): Observable<StrictHttpResponse<RecordsResponseDto>> {
 
     const rb = new RequestBuilder(this.rootUrl, RecordService.GetManyBaseRecordControllerRecordPath, 'get');
     if (params) {
@@ -318,7 +318,7 @@ export class RecordService extends BaseService {
     })).pipe(
       filter((r: any) => r instanceof HttpResponse),
       map((r: HttpResponse<any>) => {
-        return r as StrictHttpResponse<GetManyRecordResponseDto | Array<Record>>;
+        return r as StrictHttpResponse<RecordsResponseDto>;
       })
     );
   }
@@ -385,10 +385,10 @@ export class RecordService extends BaseService {
      */
     cache?: number;
 
-  }): Observable<GetManyRecordResponseDto | Array<Record>> {
+  }): Observable<RecordsResponseDto> {
 
     return this.getManyBaseRecordControllerRecord$Response(params).pipe(
-      map((r: StrictHttpResponse<GetManyRecordResponseDto | Array<Record>>) => r.body as GetManyRecordResponseDto | Array<Record>)
+      map((r: StrictHttpResponse<RecordsResponseDto>) => r.body as RecordsResponseDto)
     );
   }
 

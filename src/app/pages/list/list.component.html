@@ -1,38 +1,29 @@
-<section>
-  TODO: list header
-</section>
-
-<section>
-  <!-- TODO: add filter, search-bar, sort, pagination -->
-  <nz-table
-    #rowSelectionTable
-    nzShowSizeChanger
-    [nzData]="listOfData"
-    (nzCurrentPageDataChange)="onCurrentPageDataChange($event)"
-  >
-    <thead>
-      <tr>
-        <th
-          [nzSelections]="listOfSelection"
-          [(nzChecked)]="checked"
-          [nzIndeterminate]="indeterminate"
-          (nzCheckedChange)="onAllChecked($event)"
-        ></th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Address</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of rowSelectionTable.data">
-        <td
-          [nzChecked]="setOfCheckedId.has(data.id)"
-          (nzCheckedChange)="onItemChecked(data.id, $event)"
-        ></td>
-        <td>{{ data.name }}</td>
-        <td>{{ data.age }}</td>
-        <td>{{ data.address }}</td>
-      </tr>
-    </tbody>
-  </nz-table>
-</section>
+<!-- TODO: add filter, search-bar, sort, pagination -->
+<nz-table #table [nzData]="dataList">
+  <thead>
+    <tr>
+      <th></th>
+      <th>id</th>
+      <th>question</th>
+      <th>answer</th>
+      <th>priority</th>
+      <th>remembered</th>
+      <th>group</th>
+      <th>tag</th>
+      <th>update time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of table.data">
+      <td>placeholder:checkbox</td>
+      <td>{{ data.id }}</td>
+      <td>{{ data.zKey }}</td>
+      <td>{{ data.zValue }}</td>
+      <td>{{ data.priority }}</td>
+      <td>{{ data.isRemembered }}</td>
+      <td>{{ data?.group?.name }}</td>
+      <td>{{ data?.tag?.name }}</td>
+      <td>{{ data?.updatedAt | date: "medium" }}</td>
+    </tr>
+  </tbody>
+</nz-table>
