@@ -1,49 +1,26 @@
 <nz-layout class="app-layout">
-  <nz-sider
-    class="menu-sidebar"
-    nzCollapsible
-    nzWidth="256px"
-    nzBreakpoint="md"
-    [(nzCollapsed)]="isCollapsed"
-    [nzTrigger]="null"
-  >
+  <nz-sider nzBreakpoint="md" nzWidth="150px">
     <div class="sidebar-logo">
-      <a href="https://ng.ant.design/" target="_blank">
-        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo" />
-        <h1>Znki</h1>
-      </a>
+      <b>placeholder</b>
+      <h1>Znki</h1>
     </div>
-    <ul
-      nz-menu
-      nzTheme="dark"
-      nzMode="inline"
-      [nzInlineCollapsed]="isCollapsed"
-    >
+    <ul nz-menu nzTheme="dark" nzMode="inline">
       <li nz-menu-item>
-        <i nz-icon nzType="radar-chart"></i>
+        <i nz-icon nzType="bar-chart" nzTheme="outline"></i>
         <a routerLink="/overview">Overview</a>
       </li>
       <li nz-menu-item>
-        <i nz-icon nzType="table"></i>
         <a routerLink="/list">Management</a>
       </li>
       <li nz-menu-item>
-        <i nz-icon nzType="user-add"></i>
+        <i nz-icon nzType="team"></i>
         <a routerLink="/about">About</a>
       </li>
     </ul>
   </nz-sider>
   <nz-layout>
     <nz-header>
-      <div class="app-header">
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <i
-            class="trigger"
-            nz-icon
-            [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-          ></i>
-        </span>
-      </div>
+      <div class="app-header"></div>
     </nz-header>
     <nz-content>
       <div class="inner-content">

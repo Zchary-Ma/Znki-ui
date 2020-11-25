@@ -1,5 +1,5 @@
 import { icons } from './shared/const/icon.const';
-import { NzIconModule, NZ_ICONS } from 'ng-zorro-antd/icon';
+import { NzIconModule, NzIconService, NZ_ICONS } from 'ng-zorro-antd/icon';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -40,7 +40,7 @@ const NzModules = [
     HttpClientModule,
     ...NzModules,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [{ provide: NZ_I18N, useValue: en_US }, NzIconService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
