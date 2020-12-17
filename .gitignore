@@ -48,3 +48,4 @@ Thumbs.db
 /.storybook
 /src/stories
 /src/shared/api
+.vscode/settings.json
