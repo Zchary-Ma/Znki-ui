@@ -1,4 +1,4 @@
-import { icons } from './shared/const/icon.const';
+import { icons } from './shared/consts/icon.const';
 import { NzIconModule, NzIconService, NZ_ICONS } from 'ng-zorro-antd/icon';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +18,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { PagesModule } from './pages/pages.module';
 
 registerLocaleData(en);
 
@@ -33,6 +34,7 @@ const NzModules = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PagesModule,
     RouterModule,
     BrowserAnimationsModule,
     SharedModule,

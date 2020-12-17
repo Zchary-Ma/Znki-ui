@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import Guard from '@authing/guard';
-import { from } from 'rxjs';
 
 @Component({
   templateUrl: './auth.component.html',
@@ -10,7 +9,7 @@ export class AuthComponent implements OnInit {
   public guard: Guard = {};
   constructor() {}
 
-  readonly userPoorId = '5f9504bcdb9fa549b21f99d8';
+  readonly userPoorId = '5fdb575e6742bb39eb1a67aa';
 
   ngOnInit(): void {
     this.guard = new Guard(this.userPoorId, {
