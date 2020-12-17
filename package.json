@@ -13,6 +13,7 @@
     "storybook": "npm run docs:json && start-storybook -p 6006 --no-dll",
     "build-storybook": "npm run docs:json && build-storybook --no-dll"
   },
+  "homepage": "https://zchary-ma.github.io/znki-ui",
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.2.0",
